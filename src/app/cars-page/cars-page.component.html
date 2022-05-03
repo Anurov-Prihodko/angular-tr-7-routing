@@ -1,1 +1,15 @@
-<p>cars-page works!</p>
+<h2>Cars page</h2>
+<hr />
+
+<ul class="list-group">
+  <li class="list-group" *ngFor="let car of cars">
+    <a
+      class="list-group-item list-group-item-action"
+      [routerLink]="['/cars', car.id, car.name]"
+      [queryParams]="{ year: car.year, color: car.color }"
+      fragment="pic"
+    >
+      {{ car.name }}
+    </a>
+  </li>
+</ul>
