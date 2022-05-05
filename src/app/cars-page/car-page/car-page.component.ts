@@ -11,18 +11,10 @@ export class CarPageComponent implements OnInit {
   model: string | undefined;
   year: number | undefined;
   color: string | undefined;
-  hash!: string | null;
 
   constructor(private route: ActivatedRoute, private router: Router) {}
 
   ngOnInit(): void {
-    // this.carId = +this.route.snapshot.params['id'];
-    // this.model = this.route.snapshot.params['model'];
-    // this.year = this.route.snapshot.queryParams['year'];
-    // this.color = this.route.snapshot.queryParams['color'];
-    // this.hash = this.route.snapshot.fragment;
-
-    // Реактивный подход через Observable
     this.route.params.subscribe((params: Params) => {
       this.carId = +params['id'];
       this.model = params['model'];
@@ -31,20 +23,6 @@ export class CarPageComponent implements OnInit {
     this.route.queryParams.subscribe((params: Params) => {
       this.year = params['year'];
       this.color = params['color'];
-    });
-
-    this.route.fragment.subscribe((params: any) => {
-      this.hash = params;
-    });
-  }
-
-  openMazdaPage() {
-    this.router.navigate(['/cars', 8, 'Mazda'], {
-      queryParams: {
-        color: 'pink',
-        year: 1985,
-      },
-      fragment: 'pug',
     });
   }
 }

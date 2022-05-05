@@ -1,27 +1,5 @@
 <div class="container">
-  <ul class="nav nav-tabs pug">
-    <li class="nav-item">
-      <a
-        class="nav-link"
-        [routerLinkActiveOptions]="{ exact: true }"
-        routerLinkActive="active"
-        aria-current="page"
-        routerLink="/"
-      >
-        Main
-      </a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" routerLinkActive="active" [routerLink]="'/cars'">
-        Cars
-      </a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" routerLinkActive="active" [routerLink]="'/new'">
-        New
-      </a>
-    </li>
-  </ul>
+  <app-header></app-header>
   <div class="row">
     <div class="col-xs-10 col-xs-offset-1">
       <router-outlet></router-outlet>

@@ -11,9 +11,8 @@ export class CarsPageComponent implements OnInit {
   cars: Cars[] | undefined;
 
   constructor(
-    private carsServise: CarsService
-  ) // private authServise: AuthService
-  {}
+    private carsServise: CarsService // private authServise: AuthService
+  ) {}
 
   ngOnInit(): void {
     // this.authServise.isAuth().subscribe(console.log);

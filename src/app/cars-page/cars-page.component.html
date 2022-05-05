@@ -10,7 +10,6 @@
             class="list-group-item list-group-item-action"
             [routerLink]="['/cars', car.id, car.name]"
             [queryParams]="{ year: car.year, color: car.color }"
-            fragment="pic"
           >
             {{ car.name }}
           </a>

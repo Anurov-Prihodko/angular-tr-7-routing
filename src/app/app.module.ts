@@ -3,26 +3,20 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
-import { CarsPageComponent } from './cars-page/cars-page.component';
 import { HomePageComponent } from './home-page/home-page.component';
-import { CarPageComponent } from './car-page/car-page.component';
-import { NotFoundComponent } from './not-found/not-found.component';
-import { AuthService } from './auth.service';
-import { CarsService } from './cars.service';
-import { AuthGuard } from './auth-guard.service';
-import { NewPageComponent } from './new-page/new-page.component';
+import { HeaderComponent } from './header/header.component';
+import { CarsModule } from './cars-page/cars.module';
+import { ColorDirective } from './shared/color.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CarsPageComponent,
     HomePageComponent,
-    CarPageComponent,
-    NotFoundComponent,
-    NewPageComponent,
+    HeaderComponent,
+    ColorDirective,
   ],
-  imports: [BrowserModule, AppRoutingModule],
-  providers: [AuthService, CarsService, AuthGuard],
+  imports: [BrowserModule, AppRoutingModule, CarsModule],
+  providers: [],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
