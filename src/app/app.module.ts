@@ -5,17 +5,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { HeaderComponent } from './header/header.component';
-import { CarsModule } from './cars-page/cars.module';
-import { ColorDirective } from './shared/color.directive';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HomePageComponent,
-    HeaderComponent,
-    ColorDirective,
-  ],
-  imports: [BrowserModule, AppRoutingModule, CarsModule],
+  declarations: [AppComponent, HomePageComponent, HeaderComponent],
+  imports: [BrowserModule, AppRoutingModule, SharedModule],
   providers: [],
   bootstrap: [AppComponent],
 })

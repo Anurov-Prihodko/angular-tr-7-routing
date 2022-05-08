@@ -5,7 +5,7 @@ import { CarsPageComponent } from './cars-page.component';
 
 const carsRoures = [
   {
-    path: 'cars',
+    path: '',
     component: CarsPageComponent,
     children: [{ path: ':id/:model', component: CarPageComponent }],
   },
